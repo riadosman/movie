@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import MovieCom from "./components/MovieCom";
+import Navbar from "./components/Navbar";
+import Create from "./components/Create"
+import React, { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Product from './components/Product';
 
 function App() {
+  const [value, setvalue] = useState("");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Navbar value={value} setvalue={setvalue} />
+        <Routes>
+          <Route
+            path="/movie"
+            element={<MovieCom value={value} setvalue={setvalue} />}
+          />
+          <Route
+            path="/movie/Create"
+            element={<Create/>}
+          />
+          <Route
+            path="/movie/Product/:id"
+            element={<Product/>}
+          />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

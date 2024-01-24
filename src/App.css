@@ -1,38 +1,140 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.card{
+  width:200px;
+  padding:10px;
+  text-align:center;
+  cursor:pointer;
+  height: 320px;
+  font-size: 0.9rem;
+  transition:0.3s;
+  background-color: #0a0a0a;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+a{
+  text-decoration: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+a:hover{
+  color: whitesmoke;
+}
+.card:hover{
+  scale:0.95;
+  background-color:#383838;
+}
+.navbar{
+  position:fixed;
+  z-index:2;
+  top:0;
+  left:0;
+  width:100%;
+  background:#111;
+  height:70px;
+}
+.costum-1{
+  margin:100px 0px;
+}
+.card-subtitle{
+  margin-top:10px;
+}
+.card-title{
+  margin-top: 10px;
+}
+.info-color{
+  color:green;
+  font-weight:500;
+}
+.img{
+  height:150px;
+  width: 100%;
+}
+nav .nav-link{
+  margin:0px 20px;
+}
+nav .nav-link:hover{
+  border-bottom:1px solid blue;
+}
+.active-page{
+  background-color:blue;
+  color:white;
+}
+.create-form{
+  width:400px;
+  background-color:#111;
+  color: white;
+  border-radius:20px;
+  padding:20px;
+  margin:100px auto;
+}
+.create-form .input{
+  margin:20px 0;
+}
+.create-form .input input{
+  border-radius:10px;
+  margin:10px 0;
+  padding:10px;
+  outline:none;
+  border:none;
+  display:block;
+  width:100%;
+  border:1px solid transparent;
+}
+.create-form .input input[type="file"]{
+  border:2px solid #888;
+}
+.create-form .input input:focus{
+  border:1px solid #ccc;
+  box-shadow: 0 0 2px 5px #888;
+}
+.movie-detail{
+  justify-content: space-between;
+  margin-top: 200px;
+}
+.movie-detail .content h1:nth-child(2){
+  color: white;
+  font-size: 5rem;
+}
+.movie-detail .content p{
+  color: white;
+  font-size: 2rem;
+}
+.movie-detail img{
+  width: 350px;
+  height: 350px;
+}
+.navbar-toggler img{
+  width: 50px;
+}
+@media (max-width:1000px) {
+  .navbar-collapse{
+    background-color: #111111;
+    padding: 20px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .movie-detail{
+    flex-direction: column-reverse;
+    gap: 40px;
+    margin-bottom: 50px;
+  }
+  .movie-detail img{
+    width: 80%;
+  }
+  .navbar{
+    height:90px;
+  }
+  .create-form{
+    width:80%;
+    padding:10px;
+    margin:120px auto;
+  }
+  .create-form .input input{
+    border-radius:5 px;
+    margin:5px 0;
+    padding:5px;
+    width:100%;
+    border:1px solid transparent;
+  }
+  .movie-detail .content h1:nth-child(2){
+    font-size: 2rem;
+  }
+  .movie-detail .content h1:nth-child(1){
+    font-size: 2.2rem;
   }
 }
